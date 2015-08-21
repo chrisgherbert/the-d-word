@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "The D Word",
+  "description": "Put things in perspective by replacing the word 'drone' with 'toy helicoptor' on every page that you visit.",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*", "*://*/*"],
+      "js": ["process-page.js"]
+      // "run_at": ["document_end"]
+    }
+  ],
+
+  "browser_action": {
+   "default_icon": "icon.png"
+  },
+  "permissions": [
+   "activeTab"
+   ]
+}
